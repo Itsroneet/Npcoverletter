@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  background: white;
+  padding: 15px 0px 12px;
+  box-shadow: 0px 0px 20px;
+  position: relative;
+    z-index: 100;
+margin-bottom: 35px;
+  }
+
+.main {
+  display: flex;
+  justify-content: start;
+}
+
+.left{
+  width: 30vw;
+  box-shadow:3px -2px 20px 0px;
+  width: 30vw;
+    box-shadow: 3px -2px 20px 0px;
+    height: fit-content;
+    border-radius: 20px;
+    margin: 4vh 0 0 3vw;
+  }
+  
+  .right{
+  margin-left: 100px;
+  overflow-y: scroll;
+  height: 80vh;
+}
+
+#cover-letter-form {
+  width: 25vw;
+  border: 2px solid black;
+  padding: 40px;
+  border-radius: 20px;
+  height: fit-content;
+  margin: 40px auto;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+}
+
+h1 span {
+  color: red;
+}
+
+h1 span::before {
+  content: "";
+  animation: text 10s infinite both;
+}
+
+@keyframes text {
+  0%,
+  20% {
+    content: ".com.np";
+  }
+  21%,
+  40% {
+    content: ".net.np";
+  }
+  41%,
+  60% {
+    content: ".gov.np";
+  }
+  61%,
+  80% {
+    content: ".edu.np";
+  }
+  81%,
+  100% {
+    content: ".info.np";
+  }
+}
+
+p {
+  line-height: 2rem;
+  width: 90vw;
+  text-align: center;
+  color: red;
+  margin: 2px auto 0;
+}
+
+
+label {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+#download-btn {
+  background-color: green;
+}
+
+#output-container {
+  padding: 10px;
+  background-color: white;
+  border-radius: 20px;
+  font-family: "Segoe UI";
+}
+
+#output {
+  border: 1px solid ;
+  padding: 60px 40px;
+  border-radius: 24px;
+  width: 50vw;
+  margin: auto;
+  white-space: pre-wrap; /* Preserve whitespace and line breaks */
+}
+
+.sub{
+  text-align: center;
+  display: block;
+}
+.date{
+  text-align: right;
+  display: block;
+}
+
+footer {
+  position: relative;
+    background: #32de84;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    padding: 4px;
+}
+
+footer h2 {
+  font-size: 0.8rem;
+  color: white;
+}
+
+footer h2 a {
+  text-decoration: none;
+  color: red;
+}
+
+@media only screen and (max-width: 900px) {
+  .main {
+    flex-direction: column;
+  }
+
+  #cover-letter-form{
+    width: 60vw;
+    margin: 40px auto 20px;
+  }
+
+#output{
+  width: 70vw;
+}
+
+.left{
+  width: 72vw;
+  margin: 20px auto;
+}
+
+.right{
+  margin: 10px 0;
+  overflow-y: visible;
+  height: auto;
+}
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+
+  #cover-letter-form{
+    width: 60vw;
+    margin: 40px auto 20px;
+  }
+
+#output{
+  width: 80vw;
+}
+
+.left{
+  width: 82vw;
+}
+
+p{
+  margin-top: 10px;
+  font-size: .6rem;
+}
+
+}
+
+@media only screen and (max-width: 450px) {
+  .main {
+    flex-direction: column;
+  }
+
+  #cover-letter-form{
+    width: 85vw;
+    margin: 40px auto 20px;
+  }
+
+#output{
+  width: 80vw;
+}
+
+p{
+  margin-top: 10px;
+  font-size: .6rem;
+}
+
+}
